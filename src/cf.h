@@ -2,5 +2,5 @@
 #define _CF_H
 
 using namespace std;
-double * cosine(int *user_1, int *user_2);
+double cosine(int *user_1, int *user_2);
 #endif

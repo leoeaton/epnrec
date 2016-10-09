@@ -1,16 +1,27 @@
+#include <math.h>
 #include "cf.h"
 #include "constants.h"
 #include <assert.h> 
-double compute_user_norm(const int **user)
+int compute_user_norm(const int **user)
 {
-    
+    if(!user_norm_ready)
+        read_user_norm();
+    user_norm = new double[user_size];
+    for(int i = 0; i < user_size; i ++)
+    {
+        user_norm[i] = 0;
+        for (int j = 0; j < item_size; j ++)
+            user_norm[i] += uimatrix[i][j];
+        user_norm[i] = sqrt(user_norm[i]);
+    }
+    return 0;
 }
-double compute_user_norm(const int **user)
-{
 
-}    
 
-int 
+
+    
+
+ 
 double compute_user_length(const int **user)
 {
 

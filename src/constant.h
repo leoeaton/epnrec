@@ -13,6 +13,7 @@ extern int user_size;
 extern int aspect_size;
 extern int ** uimatrix;
 extern double *user_norm;
+extern int read_user_norm;
 extern double 
 extern double aspect_norm;
 extern double 
